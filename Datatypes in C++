@@ -9,3 +9,49 @@ types of datatypes:
 1> primitive : int , char , boolean, float etc.
 2> derived : function, array, pointer, reference.
 3> user-defined : structure, enum, union, class.
+
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int i;
+    float f;
+    char c;
+    double d;
+    bool b;
+    long int l;
+    short int s;
+    
+    cout<<"size of int is: "<<sizeof(i)<<endl;			//   4
+    cout<<"size of float is: "<<sizeof(f)<<endl;		//   4
+    cout<<"size of char is: "<<sizeof(c)<<endl;		//   1
+    cout<<"size of double is: "<<sizeof(d)<<endl;		//   8
+    cout<<"size of bool is: "<<sizeof(b)<<endl;		//   1
+    cout<<"size of long is: "<<sizeof(l)<<endl;		//   8
+    cout<<"size of short is: "<<sizeof(s)<<endl;		//   2
+    
+    return 0;
+}
+
+Q print "hello world in c++"
+
+#include<iostream>                  	// preprocessor directive including input output.
+int main(){                         	// the main execution of code begins from here.
+    std::cout<<"Hello World";       	// displays the output written in quotation.
+    return 0;                       	// exits the function without any error.
+}
+
+instead of writing std we write using namespace std;
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    cout<<"hello world"<<endl;
+    return 0;
+}
+
+<< 	// this is insertion operator
+>>	// this is extraction operator

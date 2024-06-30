@@ -1,0 +1,13 @@
+#include<iostream>			// input-output library
+using namespace std;
+
+int main(){
+    int a,b;
+
+    cout<<"Enter the value of a: ";			// output
+    cin>>a;					// input
+    cout<<"Enter the value of b: ";			// output
+    cin>>b;					// input
+    cout<<"a+b: ";				// output
+    cout<<a+b;				// output
+}

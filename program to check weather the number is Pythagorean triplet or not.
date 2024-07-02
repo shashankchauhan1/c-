@@ -1,0 +1,38 @@
+// program to check weather the number is Pythagorean triplet or not.
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int a,b,c;
+    cin>>a>>b>>c;
+    int max=0,min1=0,min2=0;
+    if(a>b && a>c){
+        max=a;
+        min1=b;
+        min2=c;
+    }
+    else if(b>a && b>c){
+        max=b;
+        min1=a;
+        min2=c;
+    }
+    else if(c>a && c>b){
+        max=c;
+        min1=a;
+        min2=b;
+    }
+    
+    max=max*max;
+    min1=min1*min1;
+    min2=min2*min2;
+    
+    if(max==min1+min2){
+        cout<<"Pytha triplet"<<endl;
+    }
+    else{
+        cout<<"non Pytha triplet"<<endl;
+    }
+    
+    return 0;
+}

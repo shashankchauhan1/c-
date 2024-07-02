@@ -1,0 +1,31 @@
+// program to check the given number is armstrong or not
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main(){
+    int n;
+    cout<<"Enter a number: ";
+    cin>>n;
+    int pwr=0,sum=0;
+    int temp1=n;
+    int temp2=n;
+    while(temp1>0){
+        temp1=temp1/10;
+        pwr++;
+    }
+    while(temp2>0){
+        int rem=temp2%10;
+        sum=sum+pow(rem,pwr);
+        temp2=temp2/10;
+    }
+    // cout<<pwr<<endl;
+    if(sum==n){
+        cout<<"armstrong number"<<endl;
+    }
+    else{
+        cout<<"not armstrong"<<endl;
+    }
+    return 0;
+}

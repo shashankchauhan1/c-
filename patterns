@@ -121,3 +121,38 @@ int main(){
     }
     return 0;
 }
+
+
+6> Alphabet patterns
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    char al='A';
+    for(int i=al; i<=70; i++){
+        for(int j=al; j<=i; j++){
+            cout<<char(i);
+        }
+        cout<<endl;
+    }
+
+    return 0;
+}
+
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    char al='A';
+    for(int i=al; i<=70; i++){
+        for(int j=al; j<=i; j++){
+            cout<<char(j);
+        }
+        cout<<endl;
+    }
+
+    return 0;
+}

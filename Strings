@@ -30,3 +30,8 @@ if(str1.compare(str2)==0){
     cout<<"Equal";
 }
 
+>>> how to check weather the string is empty or not.
+
+if(str3.empty()){
+    cout<<"Empty";
+}

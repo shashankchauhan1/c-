@@ -20,3 +20,13 @@ string str1="hlo this is apple";
 str1.clear();			// this doesn't print anything
 
 
+
+>>> how to compare two strings
+
+string str1="abc";
+string str2="abc";
+    
+if(str1.compare(str2)==0){
+    cout<<"Equal";
+}
+

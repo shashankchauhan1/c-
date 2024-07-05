@@ -30,8 +30,17 @@ if(str1.compare(str2)==0){
     cout<<"Equal";
 }
 
+
 >>> how to check weather the string is empty or not.
 
 if(str3.empty()){
     cout<<"Empty";
 }
+
+
+
+>>> how to delete something from string for that we use (erase() function)
+
+string str1="shashank";
+str1.erase(3,5);
+cout<<str1;

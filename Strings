@@ -10,3 +10,13 @@ string str="programming";
 getline(cin,str);
 
 
+>> how to concat two string 
+
+str1+str2		// way 1
+1> append meathod : str1.append(str2) 
+this append the str2 with str1
+
+string str1="hlo this is apple";
+str1.clear();			// this doesn't print anything
+
+

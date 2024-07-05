@@ -1,5 +1,12 @@
 // Strings
 
-// How to declare a string;
+>> How to declare a string;
 
 string str="programming";
+
+
+>> how to take string as a input with spaces.
+
+getline(cin,str);
+
+

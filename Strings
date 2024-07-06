@@ -88,3 +88,10 @@ cout<<str.size()<<endl;	// 5
 string str="applemango";
 string newstr=str.substr(5,4);
 cout<<newstr;
+
+
+>>> stoi : string to integer convert
+
+string str="100";
+int x=stoi(str);
+cout<<x+10;		// 110

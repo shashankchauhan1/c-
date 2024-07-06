@@ -1,1 +1,30 @@
 // Write a program to find the length of the longest word in the string.
+
+
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main(){
+    string str;
+    cout<<"Enter a string: ";
+    getline(cin,str);
+    
+    int currlen=0;
+    int maxlen=0;
+    
+    for(int i=0; str[i]!='\0'; i++){
+        if(str[i]==' '){
+            if(currlen>maxlen){
+                maxlen=currlen;
+            }
+            currlen=0;
+        }
+        else{
+                currlen++;
+            }
+    }
+    cout<<currlen;
+    return 0;
+}

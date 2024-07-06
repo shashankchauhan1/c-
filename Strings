@@ -44,3 +44,17 @@ if(str3.empty()){
 string str1="shashank";
 str1.erase(3,5);
 cout<<str1;
+
+
+
+>>> find();	 : it return the first index where it find the passing parameter.
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    string str="apple";
+    cout<<str.find("le");
+
+    return 0;
+}

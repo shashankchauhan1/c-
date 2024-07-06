@@ -95,3 +95,9 @@ cout<<newstr;
 string str="100";
 int x=stoi(str);
 cout<<x+10;		// 110
+
+
+>>> to_string(): 	convert int to string
+
+ int x=786;
+cout<<to_string(x)+"2";	// 7862

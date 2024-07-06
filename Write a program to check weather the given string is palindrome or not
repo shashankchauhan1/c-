@@ -1,2 +1,31 @@
-// Write a program to check weather the given string is palindrome or not.
+// Write a program to check weather the given string is palindrome or not
 
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main(){
+    string str;
+    cout<<"Enter a string: ";
+    getline(cin,str);
+    int len=str.length();
+    char revstr[100];
+    for(int i=0; i<len; i++){
+        revstr[i]=str[i];
+    }
+    
+    for(int i=0; i<len/2; i++){
+        int temp=revstr[i];
+        revstr[i]=revstr[len-i-1];
+        revstr[len-i-1]=temp;
+    }
+    
+    if(str.compare(revstr)==0){
+        cout<<"palindrome";
+    }
+    else{
+        cout<<"not palindrome";
+    }
+    return 0;
+}

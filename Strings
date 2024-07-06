@@ -58,3 +58,18 @@ int main(){
 
     return 0;
 }
+
+
+
+>>> insert(index,value) : it insert the value at the given index.
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    string str="apple";
+    str.insert(1,"mango");
+    cout<<str;			// amangopple
+
+    return 0;
+}

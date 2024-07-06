@@ -73,3 +73,10 @@ int main(){
 
     return 0;
 }
+
+
+
+>>> length / size
+string str="apple";
+cout<<str.length()<<endl;	// 5
+cout<<str.size()<<endl;	// 5

@@ -80,3 +80,11 @@ int main(){
 string str="apple";
 cout<<str.length()<<endl;	// 5
 cout<<str.size()<<endl;	// 5
+
+
+
+>>> substr(index,how many characters)
+
+string str="applemango";
+string newstr=str.substr(5,4);
+cout<<newstr;

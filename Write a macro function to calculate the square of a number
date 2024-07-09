@@ -1,1 +1,16 @@
 // Write a macro function to calculate the square of a number
+
+
+#include<iostream>
+using namespace std;
+
+#define square(x) ((x)*(x));
+
+int main(){
+    int x;
+    cout<<"Enter a number: ";
+    cin>>x;
+    int result=square(x);
+    cout<<"Square: "<<result<<endl;
+    return 0;
+}

@@ -1,1 +1,18 @@
 // write a macro function to check the greatest among two numbers
+
+
+
+#include<iostream>
+using namespace std;
+
+#define greater(x,y) (x>y ? x:y);
+
+int main(){
+    int x,y;
+    cout<<"Enter two number: ";
+    cin>>x>>y;
+    int result=greater(x,y);
+    cout<<"Greatest: "<<result<<endl;
+    return 0;
+}
+

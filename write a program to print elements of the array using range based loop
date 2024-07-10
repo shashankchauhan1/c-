@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    
+    int marks[]={74,43,58,60,63};
+    for(int x : marks){
+        cout<<x<<",";
+    }
+    return 0;
+}
+

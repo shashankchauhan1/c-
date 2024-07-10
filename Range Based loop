@@ -11,3 +11,22 @@ int main(){
     }
     return 0;
 }
+
+
+
+// replace all the elements greater than 60 with 90.
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    
+    int marks[]={74,43,58,60,63};
+    for(int &x : marks){
+        if(x>=60){
+            x=90;
+        }
+        cout<<x<<",";
+    }
+    return 0;
+}

@@ -1,2 +1,30 @@
 // Write a program to calculate the combination.
 
+#include<iostream>
+using namespace std;
+
+int fac(int n);
+
+int main(){
+    int n;
+    int r;
+    cout<<"Enter n and r: ";
+    cin>>n>>r;
+    int b=n-r;
+    int result1=fac(n);
+    int result2=fac(r);
+    int result3=fac(b);
+    int check=result1/(result2*result3);
+    cout<<check<<endl;
+    
+    return 0;
+}
+
+int fac(int n){
+    if(n==1 || n==0){
+        return 1;
+    }
+    else{
+        return n*fac(n-1);
+    }
+}

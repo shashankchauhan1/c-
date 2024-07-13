@@ -1,1 +1,39 @@
 // write a program to rotate a array.
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int n;
+    cout<<"Enter the sixe of the array: ";
+    cin>>n;
+    int arr[n];
+    
+    cout<<"Enter array elements: ";
+    
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    
+    int newarr[n];
+    
+    int k;
+    cout<<"Enter rotate number: ";
+    cin>>k;
+    
+    k=k%n;
+    
+    for(int i=0,j=k; j<=n; j++,i++){
+        newarr[i]=arr[j];
+    }
+    
+    for(int i=0; i<k; i++){
+        newarr[n-k+i]=arr[i];
+    }
+    cout<<"Rotated array: ";
+    for(int i=0; i<n; i++){
+        cout<<newarr[i]<<' ';
+    }
+    return 0;
+}

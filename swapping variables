@@ -1,0 +1,21 @@
+1> using temporary variable
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int a,b;
+    cout<<"Enter number 1: ";
+    cin>>a;
+    cout<<"Enter number 2: ";
+    cin>>b;
+    // swapping using third variable
+    cout<<"a Before swapping: "<<a<<endl;
+    cout<<"b before swapping: "<<b<<endl;
+    int temp=a;
+    a=b;
+    b=temp;
+    cout<<"a after swapping: "<<a<<endl;
+    cout<<"b after swapping: "<<b<<endl;
+    return 0;
+}

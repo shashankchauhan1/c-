@@ -65,3 +65,26 @@ int main(){
     cout<<"b after swapping: "<<b<<endl;
     return 0;
 }
+
+
+4> using XOR (^) operator
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int a,b;
+    cout<<"Enter number 1: ";
+    cin>>a;
+    cout<<"Enter number 2: ";
+    cin>>b;
+    // swapping using third variable
+    cout<<"a Before swapping: "<<a<<endl;
+    cout<<"b before swapping: "<<b<<endl;
+    a=a^b;
+    b=a^b;
+    a=a^b;
+    cout<<"a after swapping: "<<a<<endl;
+    cout<<"b after swapping: "<<b<<endl;
+    return 0;
+}

@@ -1,0 +1,16 @@
+// VECTORS
+
+vectors is a dynamic array in the normal arrays when we initialize array size we can't add more elements in the same array but in vectors we can add the elements 
+HOW? , when the vector is full and we need to add one more element so it creates a new vector and and the size of this new vector is double then the size of its old vector,
+and copy all the data to new vector and down the previous vector.
+
+// initializing and printing the vector
+
+
+int main(){
+    vector<int> v={10,20,30,40,50};
+    for(int elements : v){
+        cout<<elements<<' ';
+    }
+    return 0;
+}

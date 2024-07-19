@@ -1,1 +1,9 @@
 //program to print front and back element
+
+
+int main(){
+    vector<int> v={10,20,30,40,50};
+    cout<<v.front()<<endl;			// prints 10
+    cout<<v.back()<<endl;			// prints 50
+    return 0;
+}

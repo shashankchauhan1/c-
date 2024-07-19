@@ -1,1 +1,10 @@
 // program to print a specific element from the vector
+
+
+
+
+int main(){
+    vector<int> v={10,20,30,40,50};
+    cout<<v.at(3)<<endl;			// it prints 40 which is at 3rd index.
+    return 0;
+}

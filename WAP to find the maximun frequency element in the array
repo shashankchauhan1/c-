@@ -1,1 +1,35 @@
 
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int n;
+    cout<<"Enter size of the array: ";
+    cin>>n;
+    int arr[n];
+    cout<<"enter array elements: ";
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    
+    int max_freq=0;
+    int max_num=0;
+    
+    for(int i=0; i<n; i++){
+        int freq=0;
+        for(int j=0; j<n; j++){
+            if(arr[j]==arr[i]){
+                freq++;
+            }
+        }
+        if(freq>max_freq){
+            max_freq=freq;
+            max_num=arr[i];
+        }
+        
+    }
+    cout<<"Maximum frequency element is: "<<max_num<<" and its frequency is: "<<max_freq<<endl;
+    return 0;
+}

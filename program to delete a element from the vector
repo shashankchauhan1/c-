@@ -1,1 +1,15 @@
 // program to delete a element from the vector
+
+
+int main(){
+    vector<int> v={10,20,30,40,50};
+    for(int el : v){
+        cout<<el<<' ';			// 10 20 30 40 50
+    }
+    v.pop_back();			// delete the last item
+    cout<<endl;
+    for(int el : v){
+        cout<<el<<' ';			// 10 20 30 40
+    }
+    return 0;
+}

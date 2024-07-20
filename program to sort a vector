@@ -1,1 +1,13 @@
 // program to sort a vector
+
+
+#include<iostream>
+using namespace std;
+int main(){
+    vector<int> v={5,3,6,8,3};
+    sort(v.begin(),v.end());
+    for(int el:v){
+        cout<<el<<' ';			// 3 3 5 6 8	
+    }
+    return 0;
+}

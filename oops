@@ -1,8 +1,13 @@
 Object Oriented Programming is a better or easy way to write programs. with the help of this we can represent the real life scenerio in our programs.
 
-
-
 Classes and Objects: 
 
 >> classes are the blueprint of these entities.         :::    blueprint means how objects are looks like.
 >> Object are the entities in the real world. (entity means which exist).
+
+class is like a company and object are the products of that company(both company and product has their own attributes).
+
+class classname{
+	// properties,attributes.
+	// meathods.
+}

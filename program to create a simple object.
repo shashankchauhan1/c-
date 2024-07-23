@@ -1,1 +1,34 @@
 // program to create a simple object.
+
+
+#include <iostream>
+using namespace std;
+
+class teacher{
+    // properties, attributes
+    string name;
+    string dept;
+    string subject;
+    double salary;
+  
+    //   meathods <-- these meathods are also called member functions.
+
+    void changeDept(string newDept){
+        dept=newDept;
+    }
+
+};
+
+int main(){
+    teacher t1;
+    t1.name="abcd";
+    t1.department="CS";
+    t1.subject="Cpp";
+    t1.salary=50000;
+    
+    cout<<t1.name<<endl;		// this will gives an error that name is private 
+    cout<<t1.department<<endl;
+    cout<<t1.subject<<endl;
+    cout<<t1.salary<<endl;
+    return 0;
+}

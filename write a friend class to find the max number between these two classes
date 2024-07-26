@@ -1,2 +1,44 @@
 // write a friend class to find the max number between these two classes.
 
+
+#include<iostream>
+using namespace std;
+
+class B;
+class A{
+    private:
+        int a;
+    public:
+        void input(){
+            cout<<"Enter a: ";
+            cin>>a;
+        }
+    friend void max(A,B);
+};
+
+
+class B{
+    private:
+        int b;
+    public:
+        void input(){
+            cout<<"Enter b: ";
+            cin>>b;
+        }
+    friend void max(A,B);
+};
+
+void max(A aa,B bb){
+    int result=aa.a>bb.b?aa.a:bb.b;
+    cout<<"Maximum is: "<<result<<endl;
+}
+
+int main(){
+    A aa;
+    aa.input();
+    B bb;
+    bb.input();
+    max(aa,bb);
+    
+    return 0;
+}

@@ -1,5 +1,6 @@
 // write a friend function to calculate the average of 3 budgets.
 
+
 #include<iostream>
 using namespace std;
 

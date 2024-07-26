@@ -1,0 +1,27 @@
+// write a friend function to calculate the average of 3 budgets.
+
+#include<iostream>
+using namespace std;
+
+class budget{
+    private:
+        double budget1,budget2,budget3;
+    public:
+        void getBudget(double b1,double b2,double b3){
+            this->budget1=b1;
+            this->budget2=b2;
+            this->budget3=b3;
+        }
+        
+        friend void avg(budget bb);
+};
+void avg(budget bb){
+    cout<<(bb.budget1+bb.budget2+bb.budget3)/3<<endl;
+}
+
+int main(){
+    budget bud;
+    bud.getBudget(345,543,326);
+    avg(bud);
+    return 0;
+}

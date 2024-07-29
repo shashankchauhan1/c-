@@ -1,1 +1,34 @@
 // program to rotate a vector
+
+
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int main(){
+    int n;
+    cout<<"Enter size of the array: ";
+    cin>>n;
+    vector<int> arr;
+    cout<<"Enter array elements: ";
+    for(int i=0; i<n; i++){
+        int x;
+        cin>>x;
+        arr.push_back(x);
+    }
+    int k;
+    cout<<"Enter rotate element: ";
+    cin>>k;
+    
+    reverse(arr.begin(),arr.end());
+    reverse(arr.begin(),arr.begin()+k);
+    reverse(arr.begin()+k,arr.end());
+    
+    for(int i=0; i<n; i++){
+        cout<<arr[i]<<' ';
+    }
+    
+    return 0;
+}

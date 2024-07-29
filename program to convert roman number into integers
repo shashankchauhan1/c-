@@ -1,1 +1,75 @@
 // program to convert roman number into integers.
+
+
+
+
+#include<iostream>
+#include<string>
+#include<cctype>
+using namespace std;
+
+int main(){
+    string str;
+    cin>>str;
+    for(int i=0; str[i]!='\0'; i++){
+        str[i]=toupper(str[i]);
+    }
+
+    int sum=0;
+    for(int i=0; str[i]!='\0'; i++){
+        if(str[i]=='I' && i+1<str.length() && str[i+1]=='V'){
+            sum+=4;
+            i++;
+        }
+        else if(str[i]=='I' && i+1<str.length() && str[i+1]=='X'){
+            sum+=9;
+            i++;
+        }
+        else if(str[i]=='X' && i+1<str.length() && str[i+1]=='L'){
+            sum+=40;
+            i++;
+        }
+        else if(str[i]=='X' && i+1<str.length() && str[i+1]=='C'){
+            sum+=90;
+            i++;
+        }
+        else if(str[i]=='C' && i+1<str.length() && str[i+1]=='D'){
+            sum+=400;
+            i++;
+        }
+        else if(str[i]=='C' && i+1<str.length() && str[i+1]=='M'){
+            sum+=900;
+            i++;
+        }
+
+        else{
+            switch(str[i]){
+                case 'I':
+                    sum+=1;
+                    break;
+                case 'V':
+                    sum+=5;
+                    break;
+                case 'X':
+                    sum+=10;
+                    break;
+                case 'L':
+                    sum+=50;
+                    break;
+                case 'C':
+                    sum+=100;
+                    break;
+                case 'D':
+                    sum+=500;
+                    break;
+                case 'M':
+                    sum+=1000;
+                    break;
+            }
+        }
+    }
+    
+    cout<<"Numeric Number is: "<<sum<<endl;
+    
+    return 0;
+}

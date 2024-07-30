@@ -1,1 +1,22 @@
  // write a progrm to take a string as input and remove all the vowels in the string and return it.
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    string str;
+    string newstr;
+    int index=0;
+    cin>>str;
+    for(int i=0; i<str.size(); i++){
+        if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u'){
+            continue;
+        }
+        else{
+            newstr+=str[i];
+        }
+    }
+    cout<<"Removed vowels string: "<<newstr<<endl;
+    return 0;
+}

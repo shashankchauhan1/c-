@@ -1,1 +1,14 @@
+// reference variable is an alias of the variable
+
+
+#include<iostream>
+using namespace std;
+    int main(){
+    int x=5;
+    int &ref=x;                 // reference variable is used as an alias for variable x
+    cout<<x<<endl;
+    cout<<ref<<endl;
+    return 0;   
+}
+
 

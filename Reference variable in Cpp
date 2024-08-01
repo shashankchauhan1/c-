@@ -1,5 +1,6 @@
 // reference variable is an alias of the variable
 
+EXAMPLE 1:
 
 #include<iostream>
 using namespace std;
@@ -12,3 +13,20 @@ using namespace std;
 }
 
 
+EXAMPLE 2:
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int x=1;
+    int &ref=x;
+    cout<<x<<" "<<ref<<endl;        // 1 1
+    int y=2;
+    ref=y;
+    y=3;
+    cout<<x<<" "<<ref<<endl;        //2 2
+    x=4;
+    cout<<x<<" "<<ref<<" "<<y<<endl;        // 4 4 3
+    return 0;
+}

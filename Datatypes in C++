@@ -1,5 +1,5 @@
 Datatypes in C++.
-
+ 
 memory occupied by datatypes.
 1> int : 4 byte	2> float : 4 byte	3> char : 1 byte
 4> double : 8 byte	5> boolean : 1 byte	6> short : 2 byte

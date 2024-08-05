@@ -1,2 +1,59 @@
 //create a class which take rollno, name, marks as input and return grade as output according to their grades.
 
+#include<iostream>
+using namespace std;
+
+class A{
+    private:
+        int rollno;
+        string name;
+        int marks;
+        string grade;
+    public:
+        void setData();
+        void getGrade();
+};
+
+void A::setData(){
+    cout<<"Enter your rollno: ";
+    cin>>rollno;
+    cin.ignore();
+    cout<<"Enter your name: ";
+    cin>>name;
+    cout<<"Enter your marks: ";
+    cin>>marks;
+}
+
+void A::getGrade(){
+    if(marks>90){
+        grade='O';
+    }
+    else if(marks>80 && marks<=90){
+        grade="A+";
+    }
+    else if(marks>70 && marks<=80){
+        grade="A";
+    }
+    else if(marks>60 && marks<=70){
+        grade="B";
+    }
+    else if(marks>50 && marks<=60){
+        grade="C";
+    }
+    else if(marks>40 && marks<=50){
+        grade="P";
+    }
+    else{
+        grade="F";
+    }
+    cout<<"your Grade is: "<<grade<<endl;
+}
+
+
+
+int main(){
+    A obj1;
+    obj1.setData();
+    obj1.getGrade();
+    return 0;
+}

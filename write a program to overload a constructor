@@ -1,1 +1,59 @@
 // write a program to overload a constructor.
+
+
+#include<iostream>
+using namespace std;
+
+class A{
+    private:
+        double length;
+        double width;
+    public:
+        A();
+        A(double length);
+        A(double length,double width);
+        
+        double area();
+        double perimeter();
+        void display();
+        
+};
+
+A::A(){
+    width=0;
+    length=0;
+}
+
+A::A(double l){
+    width=l;
+    length=l;
+}
+
+A::A(double l,double w){
+    width=w;
+    length=l;
+}
+
+double A::area(){
+    return length*width;
+}
+
+double A::perimeter(){
+    return 2*(length+width);    
+}
+
+void A::display(){
+    cout<<"Length is: "<<length<<endl;
+    cout<<"Width is: "<<width<<endl;
+    cout<<"Area is: "<<area()<<endl;
+    cout<<"Perimeter: "<<perimeter()<<endl;
+}
+
+int main(){
+    double length=4;
+    double width=5;
+    
+    A obj1(width);
+    obj1.display();
+    return 0;
+}

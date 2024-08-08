@@ -1,1 +1,6 @@
 // static data member and member function
+
+
+>>> Each and every object has a seprate copy of its instances.
+>>> Class only access static function.
+>>> Object access both static and member function.

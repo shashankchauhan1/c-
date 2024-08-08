@@ -4,3 +4,43 @@
 >>> Each and every object has a seprate copy of its instances.
 >>> Class only access static function.
 >>> Object access both static and member function.
+
+
+EXAMPLE   1:
+
+#include<iostream>
+using namespace std;
+
+class student{
+    public:
+        static int totalStudents;
+        
+    // constructor
+        student(){
+            totalStudents++;
+        }
+        
+        // static member function
+        
+        static int getTotalStudents(){
+            return totalStudents;
+        }
+};
+
+int student::totalStudents=0;
+
+int main(){
+    // create student object;
+    student s1;
+    cout<<s1.getTotalStudents()<<endl;
+    student s2;
+    cout<<s2.getTotalStudents()<<endl;
+    student s3;
+    cout<<s2.getTotalStudents()<<endl;
+    
+    cout<<"totalStudents: "<<student::getTotalStudents()<<endl;
+    cout<<s1.getTotalStudents()<<endl;
+    cout<<s2.getTotalStudents()<<endl;
+    cout<<s3.getTotalStudents()<<endl;
+    return 0;
+}

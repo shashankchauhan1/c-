@@ -1,1 +1,71 @@
 write a program to sort three numbers
+
+
+#include<iostream>
+using namespace std;
+ 
+int main(){
+    
+    long long a,b,c,max,min,cen;
+    cin>>a>>b>>c;
+    if(a>=b && a>=c){
+        max=a;
+        if(b>=c){
+            cen=b;
+        }
+        else{
+            cen=c;
+        }
+        
+    }
+    else if(b>=a && b>=c){
+        max=b;
+        if(a>=c){
+            cen=a;
+        }
+        else{
+            cen=c;
+        }
+    }
+    else if(c>=a && c>=b){
+        max=c;
+        if(a>=b){
+            cen=a;
+        }
+        else{
+            cen=b;
+        }
+    }
+    
+    if(a<=b && a<=c){
+        min=a;
+        if(b<=c){
+            cen=b;
+        }
+        else{
+            cen=c;
+        }
+    }
+    else if(b<=a && b<=c){
+        min=b;
+        if(a<=c){
+            cen=a;
+        }
+        else{
+            cen=c;
+        }
+    }
+    else if(c<=a && c<=b){
+        min=c;
+        if(a<=b){
+            cen=a;
+        }
+        else{
+            cen=b;
+        }
+    }
+    cout<<min<<endl;
+    cout<<cen<<endl;
+    cout<<max<<endl;
+    return 0;
+}

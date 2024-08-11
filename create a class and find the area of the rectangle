@@ -1,1 +1,35 @@
 // create a class and find the area of the rectangle.
+
+
+
+#include<iostream>
+using namespace std;
+
+class A{
+    private:
+        double length;
+        double breadth;
+    public:
+        
+        void setValues();
+        void getArea();
+};
+
+void A::setValues(){
+    cout<<"Enter length: ";
+    cin>>length;
+    cout<<"Enter breadth: ";
+    cin>>breadth;
+}
+
+void A::getArea(){
+    cout<<"Area is: "<<length*breadth<<endl;
+}
+
+int main(){
+    A a1;
+    A a2;
+    a1.setValues();
+    a1.getArea();
+    return 0;
+}

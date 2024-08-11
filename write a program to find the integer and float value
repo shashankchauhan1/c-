@@ -1,1 +1,21 @@
 // write a program to find the integer and float value.
+
+
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+
+using namespace std;
+
+int main(){
+    double n;
+    cin>>n;
+    double nn=0.0;
+    if(modf(n,&nn)==0.0f){
+        cout<<"int "<<int(n)<<endl;
+    }
+    else{
+        cout<<"float "<<fixed<<setprecision(3)<<modf(n,&nn)<<endl;
+    }
+    return 0;
+}

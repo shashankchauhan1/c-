@@ -1,1 +1,45 @@
 // write a program to find area 0f rectangle using friend class.
+
+
+#include<iostream>
+using namespace std;
+
+class B;
+
+class A{
+    private:
+        int l;
+    public:
+        A(int l){
+            this->l=l;
+        }
+        
+        friend void areaofrectangle(A obj1,B obj2);
+        
+};
+
+class B{
+    private:
+        int b;
+    public:
+        B(int b){
+            this->b=b;
+        }
+        
+        friend void areaofrectangle(A obj1,B obj2);
+        
+};
+
+void areaofrectangle(A obj1,B obj2){
+    int length=obj1.l;
+    int breadth=obj2.b;
+    cout<<"Area of Rectangle is: "<<length*breadth<<endl;
+}
+
+
+int main(){
+    A obj1(5);
+    B obj2(4);
+    areaofrectangle(obj1,obj2);
+    return 0;
+}

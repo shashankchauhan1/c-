@@ -1,1 +1,40 @@
 // write a friend function to check weather the value inside two classes are same or not. if same return 1 else 0;
+
+
+#include<iostream>
+using namespace std;
+
+class B;
+class A{
+    int x;
+    public:
+        A(int z){
+            x=z;
+        }
+        
+        friend bool f(A,B);
+        
+};
+
+class B{
+    int y;
+    public:
+        B(int b){
+            y=b;
+        }
+    friend bool f(A,B);
+};
+
+bool f(A obj1,B obj2){
+    if(obj1.x==obj2.y){
+        return true;
+    }
+    return false;
+}
+
+int main(){
+    A obj1(4);
+    B obj2(4);
+    cout<<f(obj1,obj2);
+    return 0;
+}

@@ -1,1 +1,24 @@
-write a program to convert decimal to binary
+// write a program to convert decimal to binary
+
+#include<iostream>
+#include<cmath>
+#include<string>
+#include<algorithm>
+
+using namespace std;
+
+int main(){
+    int n;
+    string s;
+    cin>>n;
+    
+    while(n!=0){
+        int rem=n%2;
+        s+=to_string(rem);
+        n=n/2;
+    }
+    reverse(s.begin(),s.end());
+    cout<<s<<endl;
+    return 0;
+}
+

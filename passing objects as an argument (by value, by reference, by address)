@@ -1,2 +1,49 @@
 // passing objects as an argument (by value, by reference, by address)
 
+
+1>  Passing objects as an argument (by value)
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+class Book{
+    private:
+        string title;
+        string author;
+    public:
+        Book(const string t,const string a){
+            title=t;
+            author=a;
+        }
+        
+        // Display book information
+        
+        void display(){
+            cout<<"Title: "<<title<<" Author: "<<author<<endl;
+        }
+        
+        // Function to modify value
+        
+        void modifyByValue(Book b){
+            b.title="Modified Title";
+            b.author="Modified Author";
+        }
+        
+};
+
+int main(){
+    Book originalBook("1984","George Orwell");
+    
+    cout<<"Original Book: ";
+    originalBook.display();
+    
+    // pass by value
+    originalBook.modifyByValue(originalBook);
+    cout<<"After modifyByValue: ";
+    originalBook.display();
+    
+    return 0;
+}
+
+

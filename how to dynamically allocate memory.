@@ -7,3 +7,27 @@ Allocation Type	Memory Location	Memory Management	Access
 Static		Stack		Automatic			Direct access using object name
 
 Dynamic		Heap		Manual (new, delete)		Access using pointer and arrow/dereference operators
+
+
+#include<iostream>
+using namespace std;
+
+class A{
+    private:
+        int *x;      // creating a pointer
+    public:
+        A(int n){
+            x=new int(n);      // dynamically allocating memory
+        }
+        
+        void showValue(){
+            cout<<*x<<endl;        // function to show the value inside the pointer
+        }
+    
+};
+
+int main(){
+    A obj1(120);
+    obj1.showValue();
+    return 0;
+}

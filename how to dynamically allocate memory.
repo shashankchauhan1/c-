@@ -1,2 +1,9 @@
 // how to dynamically allocate memory.
 
+
+
+Allocation Type	Memory Location	Memory Management	Access
+
+Static		Stack		Automatic			Direct access using object name
+
+Dynamic		Heap		Manual (new, delete)		Access using pointer and arrow/dereference operators

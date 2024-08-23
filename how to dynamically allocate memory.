@@ -23,6 +23,11 @@ class A{
         void showValue(){
             cout<<*x<<endl;        // function to show the value inside the pointer
         }
+
+        ~A(){                    // destructor called 
+            delete x;            // memory deallocated
+            cout<<"x is deleted."<<endl;        
+        }
     
 };
 

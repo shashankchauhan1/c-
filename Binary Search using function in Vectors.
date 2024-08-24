@@ -1,1 +1,33 @@
 // Binary Search using function in Vectors.
+
+
+
+#include<iostream>
+#include<algorithm>
+#include<functional>
+#include<vector>
+using namespace std;
+
+int main(){
+    vector<int> v1;
+    int n;
+    cout<<"Enter number of elements: ";
+    cin>>n;
+    
+    for(int i=0; i<n; i++){
+        int x;
+        cin>>x;
+        v1.push_back(x);
+    }
+    
+    // for binary search vector should be sorted
+    sort(v1.begin(),v1.end());
+    int c;
+    cout<<"Enter number to check weather it exist in the array or not: ";
+    cin>>c;
+    
+    bool val=binary_search(v1.begin(),v1.end(),c);
+    cout<<boolalpha<<val;
+    
+    return 0;
+}

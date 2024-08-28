@@ -1,1 +1,33 @@
 // Program to find the lower and upper bound
+
+Lower Bound : it is used to find the first occurance of the element in the vector and if not present then it return the perfect index for that element where the element can be inserted and maintain the sorted order (this only works in the sorted vector).
+
+#include<iostream>
+#include<algorithm>
+#include<functional>
+#include<vector>
+using namespace std;
+
+int main(){
+    vector<int> v1;
+    int n;
+    cout<<"Enter number of elements: ";
+    cin>>n;
+    
+    for(int i=0; i<n; i++){
+        int x;
+        cin>>x;
+        v1.push_back(x);
+    }
+
+    sort(v1.begin(),v1.end());
+    
+    int val;
+    cout<<"Enter number to check its lower bound: ";
+    cin>>val;
+    
+    int lowerBound=lower_bound(v1.begin(),v1.end(),val)-v1.begin();
+    cout<<"At Index: "<<lowerBound<<endl;
+    
+    return 0;
+}

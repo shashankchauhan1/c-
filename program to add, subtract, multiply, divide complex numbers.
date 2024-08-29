@@ -1,0 +1,76 @@
+// program to add, subtract, multiply, divide complex numbers.
+
+1> add
+
+#include<iostream>
+using namespace std;
+
+class A{
+    private:
+        int x;
+        int y;
+    public:
+        void getData(){
+            cout<<"Enter real,img numbers: ";
+            cin>>x>>y;
+        }
+        void display(){
+            cout<<x<<"+"<<y<<'i'<<endl;
+        }
+        
+        A operator+(A b){
+           A c;
+           c.x=x+b.x;
+           c.y=y+b.y;
+           return c;
+        }
+        
+        
+};
+
+int main(){
+    A a,b,c;
+    a.getData();
+    b.getData();
+    c=a+b;
+    c.display();
+    return 0;
+}
+
+
+2> subtract
+
+#include<iostream>
+using namespace std;
+
+class A{
+    private:
+        int x;
+        int y;
+    public:
+        void getData(){
+            cout<<"Enter real,img numbers: ";
+            cin>>x>>y;
+        }
+        void display(){
+            cout<<x<<"+"<<y<<'i'<<endl;
+        }
+        
+        A operator-(A b){
+           A c;
+           c.x=x-b.x;
+           c.y=y-b.y;
+           return c;
+        }
+        
+        
+};
+
+int main(){
+    A a,b,c;
+    a.getData();
+    b.getData();
+    c=a-b;
+    c.display();
+    return 0;
+}

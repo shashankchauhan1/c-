@@ -1,1 +1,46 @@
 // program to concat two string in the class
+
+// concat two strings
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+class A{
+    private:
+        char x[20];
+        char y[10];
+    public:
+        void f(char x[],char y[]);
+        
+        void display(){
+            cout<<x<<endl;
+        }
+        
+};
+
+void A::f(char *a,char *b){
+    int i=0,j=0;
+    for(i=0; a[i]!='\0'; i++){
+        x[i]=a[i];
+    }
+
+    for(j=0; b[j]!='\0'; j++){
+        y[j]=b[j];
+    }
+
+    for(j=0; y[j]!='\0'; j++, i++){
+        x[i]=y[j];
+    }
+    x[i]='\0';
+    
+}
+
+int main(){
+    char a[10]="ABC";
+    char b[10]="XYZ";
+    A obj;
+    obj.f(a,b);
+    obj.display();
+    return 0;
+}

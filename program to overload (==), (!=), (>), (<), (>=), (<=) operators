@@ -149,3 +149,72 @@ int main(){
     cout<<boolalpha<<(obj1<obj2)<<endl;
     return 0;
 }
+
+
+------------------------------------------------------------------COMBINED PROGRAM OF OVERLOADING RELATIONAL OPERATOR--------------------------------------------
+
+#include<iostream>
+using namespace std;
+
+class Point{
+    private:
+        int x,y;
+    public:
+        // constructor
+        Point(int x=0, int y=0){
+            this->x=x;
+            this->y=y;
+        }
+        
+        // overloading the == operator
+        bool operator==(const Point& rhs)const{
+            return x==rhs.x && y==rhs.y;
+        }
+        
+        // overloading the != operator
+        bool operator!=(const Point& rhs)const{
+            return !(*this==rhs);
+        }
+        // another way to write !=
+        bool operator!=(const Point& obj){
+            return (x!=obj.x && y!=obj.y);
+        }
+        
+        //overloading the < operator
+        bool operator<(const Point& rhs)const{
+            return (x<rhs.x) || (x==rhs.x && y<rhs.y);
+        }
+        
+        //overloading the > operator
+        bool operator>(const Point& rhs)const{
+            return (x>rhs.x) || (x==rhs.x && y>rhs.y);
+        }
+        
+        //overloading the <= operator
+        bool operator<=(const Point& rhs)const{
+            return !(*this>rhs);
+        }
+        
+        //overloading the >= operator
+        bool operator>=(const Point& rhs)const{
+            return !(*this<rhs);
+        }
+        
+        void display()const{
+            cout<<"("<<x<<","<<y<<")"<<endl;
+        }
+};
+
+int main(){
+    Point p1(2,3);
+    Point p2(4,5);
+    Point p3(2,3);
+    
+    cout<<boolalpha<<(p1==p3)<<endl;
+    cout<<boolalpha<<(p1!=p2)<<endl;
+    cout<<boolalpha<<(p2>p1)<<endl;
+    cout<<boolalpha<<(p1<p2)<<endl;
+    cout<<boolalpha<<(p2>=p1)<<endl;
+    cout<<boolalpha<<(p1<=p3)<<endl;
+    return 0;
+}

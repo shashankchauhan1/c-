@@ -1,6 +1,6 @@
 // program to overload (==), (!=), (>), (<), (>=), (<=) operators
 
-// 1> comparison(==)
+// 1> COMPARISON (==) OPERATOR OVERLOADING----------------------------------------------------------
 
 #include<iostream>
 using namespace std;
@@ -39,7 +39,7 @@ int main(){
 }
 
 
-// 2> not equals to(!=) operator
+// 2> NOT EQUALS TO (!=) OPERATOR OVERLOADING-----------------------------------------------------------
 
 #include<iostream>
 using namespace std;
@@ -78,7 +78,7 @@ int main(){
 }
 
 
-// 3> greater (>) operator overloading
+// 3> GREATER (>) OPERATOR OVERLOADING----------------------------------------------------------------
 
 #include<iostream>
 using namespace std;
@@ -97,7 +97,7 @@ class A{
             cout<<"X: "<<x<<" Y: "<<y<<endl;
         }
         
-        // overloading != operator
+        // overloading > operator
 
         bool operator>(const A& obj){
             return (x>obj.x || x==obj.x && y>obj.y);
@@ -110,5 +110,42 @@ int main(){
     A obj2(10,10);
 
     cout<<boolalpha<<(obj1>obj2)<<endl;
+    return 0;
+}
+
+
+
+// 4> LESSER (<) OPERATOR OVERLOADING-----------------------------------------------------------
+
+#include<iostream>
+using namespace std;
+
+class A{
+    private:
+        int x;
+        int y;
+    public:
+        A(int v1=0,int v2=0){
+            x=v1;
+            y=v2;
+        }
+        
+        void display(){
+            cout<<"X: "<<x<<" Y: "<<y<<endl;
+        }
+        
+        // overloading < operator
+
+        bool operator<(const A& obj){
+            return (x<obj.x || x==obj.x && y<obj.y);
+        }
+        
+};
+
+int main(){
+    A obj1(20,20);
+    A obj2(10,10);
+
+    cout<<boolalpha<<(obj1<obj2)<<endl;
     return 0;
 }

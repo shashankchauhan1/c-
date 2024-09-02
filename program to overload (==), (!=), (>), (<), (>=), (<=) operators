@@ -1,0 +1,39 @@
+// program to overload (==), (!=), (>), (<), (>=), (<=) operators
+
+// 1> comparison(==)
+
+#include<iostream>
+using namespace std;
+
+class A{
+    private:
+        int x;
+        int y;
+    public:
+        A(int v1=0,int v2=0){
+            x=v1;
+            y=v2;
+        }
+        
+        void display(){
+            cout<<"X: "<<x<<" Y: "<<y<<endl;
+        }
+        
+        // overloading == operator
+
+        bool operator==(const A& obj){
+            return (x==obj.x && y==obj.y);
+        }
+        
+};
+
+int main(){
+    A obj1(20,20);
+    A obj2(20,20);
+    A obj3(10,3);
+    A obj4(5,30);
+
+    cout<<boolalpha<<(obj1==obj2)<<endl;
+    cout<<boolalpha<<(obj3==obj4)<<endl;
+    return 0;
+}

@@ -1,1 +1,39 @@
 // program to overload insertion(<<),output operator.
+
+#include<iostream>
+using namespace std;
+
+class box{
+    private:
+        int length;
+        int breadth;
+        int height;
+    public:
+        box(int l,int b,int h){
+            this->length=l;
+            this->breadth=b;
+            this->height=h;
+        }
+        
+        void calculateVolume(){
+            cout << static_cast<long long>(length)*breadth*height;
+        }
+        
+        // overloading << operator
+        
+        friend ostream& operator<<(ostream& out,box b){
+            out<<b.length<<" "<<b.breadth<<" "<<b.height<<endl;
+            return out;
+        }
+        
+        
+};
+
+int main(){
+    box r1(2,3,4);
+    cout<<"Dimensions are: ";
+    cout<<r1;
+    cout<<"Volume is: ";
+    r1.calculateVolume();
+    return 0;
+}

@@ -1,1 +1,66 @@
 // three parameter operator overloading
+
+
+#include<iostream>	
+using namespace std;
+
+class Date{
+    private:
+        int day,month,year;
+    public:
+        // constructor
+        Date(int d=1,int m=1,int y=2000){
+            day=d;
+            month=m;
+            year=y;
+        }
+        
+        // overloading operator
+        
+        bool operator==(const Date& obj){
+            return day==obj.day && month==obj.month && year==obj.year;
+        }
+        
+        // overloading != operator
+        
+        bool operator!=(const Date& obj){
+            return !(*this==obj);
+        }
+        
+        // overloading < operator
+        
+        bool operator<(const Date& obj){
+            return (year<obj.year) || (year==obj.year && month<obj.month) || (year==obj.year && month==obj.month && day<obj.day);
+        }
+        
+        // overloading > operator
+        
+        bool operator>(const Date& obj){
+            return (year>obj.year) || (year==obj.year && month>obj.month) || (year==obj.year && month==obj.month && day>obj.day);
+        }
+        
+        // overloading <= operator
+        
+        bool operator<=(const Date& obj){
+            return !(*this<obj);
+        }
+        
+        // overloading >= operator
+        
+        bool operator>=(const Date& obj){
+            return !(*this>obj);
+        }
+        
+};
+
+int main(){
+    Date d1(15,8,2022), d2(23,12,2021),d3(15,8,2022);
+    cout<<boolalpha<<(d1==d3)<<endl;
+    cout<<boolalpha<<(d1!=d2)<<endl;
+    cout<<boolalpha<<(d2>d1)<<endl;
+    cout<<boolalpha<<(d1<d2)<<endl;
+    cout<<boolalpha<<(d2>=d1)<<endl;
+    cout<<boolalpha<<(d1<=d3)<<endl;
+    return 0;
+    return 0;
+}

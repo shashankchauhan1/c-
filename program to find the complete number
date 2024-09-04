@@ -6,3 +6,27 @@ EXAMPLE:
           200
           30
           4
+
+
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main(){
+    int n;
+    cin>>n;
+    string str=to_string(n);
+    int mul=1;
+    for(int i=0; i<str.length()-1; i++){
+        mul*=10;
+    }
+    
+    for(int i=0; i<str.length(); i++){
+        int num=str[i]-'0';
+        cout<<num*mul<<endl;
+        mul/=10;
+    }
+    
+    return 0;
+}

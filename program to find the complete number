@@ -1,0 +1,8 @@
+// program to find the complete number.
+>> a complete number is number which contain only one digit and other are zero.
+EXAMPLE: 
+          1234
+          1000
+          200
+          30
+          4

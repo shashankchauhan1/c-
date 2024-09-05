@@ -1,1 +1,63 @@
 // write a program to overload (+,-,*) using friend function.
+
+
+#include<iostream> 
+using namespace std;
+
+class Complex{ 
+    private: 
+        int real; 
+        int img; 
+    public: 
+        Complex(int r=0,int i=0){ 
+            real=r; 
+            img=i; 
+        } 
+        void display(){ 
+            cout<<real<<"+"<<img<<"i"<<endl; 
+        } 
+        
+        friend Complex operator+(const Complex& obj1,const Complex& obj2); 
+        friend Complex operator-(const Complex& obj1,const Complex& obj2); 
+        friend Complex operator*(const Complex& obj1,const Complex& obj2); 
+    
+};
+
+Complex operator+(const Complex& obj1,const Complex& obj2){ 
+    Complex temp; 
+    temp.real=obj1.real+obj2.real; 
+    temp.img=obj1.img+obj2.img; 
+    return temp; 
+}
+
+Complex operator-(const Complex& obj1,const Complex& obj2){
+    Complex temp; 
+    temp.real=obj1.real-obj2.real;
+    temp.img=obj1.img-obj2.img; 
+    return temp; 
+}
+
+Complex operator*(const Complex& obj1,const Complex& obj2){ 
+    Complex temp; 
+    temp.real=obj1.real*obj2.real-obj1.img*obj2.img; 
+    temp.img=obj1.real*obj2.img+obj1.img*obj2.real; 
+    return temp; 
+}
+
+int main(){ 
+    
+    Complex obj1(2,3);
+    Complex obj2(6,1);
+    Complex obj3,obj4,obj5; 
+    // sum 
+    obj3=obj1+obj2; 
+    obj3.display();
+    // subtract 
+    obj4=obj1-obj2;
+    obj4.display();
+    // multiply 
+    obj5=obj1*obj2;
+    obj5.display();
+return 0;
+}
+

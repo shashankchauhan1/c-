@@ -24,10 +24,10 @@ int main(){
 ------------------------------------------------------------------------------------------------------------------
 2> Write a program that:
 
-2.1> Dynamically allocates a single char variable.
-2.2> Asks the user to input a character for the variable.
-3.1> Prints the ASCII value of the character.
-3.1> Deallocates the variable.
+2.1> Dynamically allocates a single double variable.
+2.2> Asks the user to input a value for the variable.
+2.3> Prints the value of the variable with two decimal places.
+2.4> Deallocates the variable.
 
 
 #include<iostream>
@@ -47,10 +47,10 @@ int main(){
 ---------------------------------------------------------------------------------------------------------------
 3> Write a program that:
 
-3.1> Dynamically allocates a single char variable.
-3.2> Asks the user to input a character for the variable.
-3.1> Prints the ASCII value of the character.
-3.1> Deallocates the variable.
+3.1> Dynamically allocates a single double variable.
+3.2> Asks the user to input a value for the variable.
+3.3> Prints the value of the variable with two decimal places.
+3.4> Deallocates the variable.
 
 
 #include<iostream>

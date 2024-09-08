@@ -20,3 +20,49 @@ int main(){
     delete x;
     return 0;
 }
+
+------------------------------------------------------------------------------------------------------------------
+2> Write a program that:
+
+2.1> Dynamically allocates a single char variable.
+2.2> Asks the user to input a character for the variable.
+3.1> Prints the ASCII value of the character.
+3.1> Deallocates the variable.
+
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main(){
+    double *f;
+    f = new double;
+    cout << "Enter a floating point number: ";
+    cin >> *f;
+    cout << fixed << setprecision(2) << "You entered: " << *f << endl;
+    delete f;
+    return 0;
+}
+
+---------------------------------------------------------------------------------------------------------------
+3> Write a program that:
+
+3.1> Dynamically allocates a single char variable.
+3.2> Asks the user to input a character for the variable.
+3.1> Prints the ASCII value of the character.
+3.1> Deallocates the variable.
+
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main(){
+    float *f;
+    f = new float;
+    cout << "Enter a floating point number: ";
+    cin >> *f;
+    cout << fixed << setprecision(2) << "You entered: " << *f << endl;
+    delete f;
+    return 0;
+}

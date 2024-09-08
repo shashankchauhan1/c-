@@ -113,3 +113,38 @@ int main(){
     
     return 0;
 }
+
+------------------------------------------------------------------------------------------------------------
+6> Dynamically Allocating 2D array
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int r,c;
+    cout<<"Enter rows, cols: ";
+    cin>>r>>c;
+    int **ptr;
+    ptr=new int*[r];
+    for(int i=0; i<r; i++){
+        ptr[i]=new int[c];
+    }
+    cout<<"Enter array elements: ";
+    for(int i=0; i<r; i++){
+        for(int j=0; j<c; j++){
+            cin>>ptr[i][j];
+        }
+    }
+    cout<<"Result: "<<endl;
+    for(int i=0; i<r; i++){
+        for(int j=0; j<c; j++){
+            cout<<ptr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    for(int i=0; i<r; i++){
+        delete[] ptr[i];
+    }
+    delete[] ptr;
+    return 0;
+}

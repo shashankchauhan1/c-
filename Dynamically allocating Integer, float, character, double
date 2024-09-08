@@ -2,9 +2,9 @@
 
 1> Write a program that:
 
-1.1> Dynamically allocates a single double variable.
+1.1> Dynamically allocates a Integer variable.
 1.2> Asks the user to input a value for the variable.
-1.3> Prints the value of the variable with two decimal places.
+1.3> Prints the value of the variable.
 1.4> Deallocates the variable.
 
 
@@ -47,7 +47,7 @@ int main(){
 ---------------------------------------------------------------------------------------------------------------
 3> Write a program that:
 
-3.1> Dynamically allocates a single double variable.
+3.1> Dynamically allocates a single float variable.
 3.2> Asks the user to input a value for the variable.
 3.3> Prints the value of the variable with two decimal places.
 3.4> Deallocates the variable.
@@ -64,5 +64,28 @@ int main(){
     cin >> *f;
     cout << fixed << setprecision(2) << "You entered: " << *f << endl;
     delete f;
+    return 0;
+}
+
+------------------------------------------------------------------------------------------------------------
+4> Write a program that:
+
+4.1> Dynamically allocates a single char variable.
+4.2> Asks the user to input a character for the variable.
+4.3> Prints the ASCII value of the character.
+4.4> Deallocates the variable.
+
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main(){ 
+    char *ch; 
+    ch=new char; 
+    cout<<"Enter a character: "; 
+    cin>>*ch; 
+    cout<<int(*ch)<<endl; 
+    delete ch; 
     return 0;
 }

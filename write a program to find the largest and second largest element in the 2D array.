@@ -1,1 +1,38 @@
 // write a program to find the largest and second largest element in the 2D array.
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int r,c;
+    cout<<"Enter rows and columns: ";
+    cin>>r>>c;
+    int arr[r][c];
+    
+    for(int i=0; i<r; i++){
+        for(int j=0; j<c; j++){
+            cin>>arr[i][j];
+        }
+    }
+    
+    int max=arr[0][0];
+    int smax=0;
+    for(int i=0; i<r; i++){
+        for(int j=0; j<c; j++){
+            if(arr[i][j]>max){
+                smax=max;
+                max=arr[i][j];
+            }
+            if(arr[i][j]>smax && arr[i][j]<max){
+                smax=arr[i][j];
+            }
+            
+        }
+    }
+    
+    cout<<"Largest: "<<max<<endl;
+    cout<<"Second largest: "<<smax<<endl;
+    
+    return 0;
+}

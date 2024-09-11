@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+
+class A{
+    public:
+        void bark(){
+            cout<<"Barking"<<endl;
+        }
+};
+
+class B{
+    public:
+        void speak(){
+            cout<<"Speaking"<<endl;
+        }
+};
+
+class C:public A, public B{
+    public:
+        public:
+            void tell(){
+                cout<<"Multilevel inheritance achived."<<endl;
+            }
+}
+;
+
+int main(){
+    C obj;
+    obj.speak();
+    obj.bark();
+    obj.tell();
+    
+    return 0;
+}

@@ -1,0 +1,36 @@
+// First and Last occurence of the element in the given array (linear,binary approach).
+
+1> Linear Approach
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main(){
+    int n,k;
+    cout<<"Enter size of the element: ";
+    cin>>n;
+    cout<<"Enter number to be searched: ";
+    cin>>k;
+    vector<int> v1(n);
+    for(int i=0; i<n; i++){
+        cin>>v1[i];
+    }
+    
+    for(int i=0; i<n; i++){
+        if(v1[i]==k){
+            cout<<i<<" ";
+            break;
+        }
+    }
+    for(int i=n-1; i>0; i--){
+        if(v1[i]==k){
+            cout<<i<<" ";
+            break;
+        }
+    }
+    return 0;
+}
+
+
+2> Binary Approach

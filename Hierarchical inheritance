@@ -1,1 +1,56 @@
 // Hierarchical inheritance
+
+
+#include<iostream>
+using namespace std;
+
+class Animal{
+    public:
+        string breed;
+        int lifeSpan;
+        
+};
+
+class Dog: public Animal{
+    public:
+        string name;
+        string color;
+        
+        void setAttributes(string b,int ls,string n,string c){
+            this->breed=b;
+            this->lifeSpan=ls;
+            this->name=n;
+            this->color=c;
+        }
+        void getAttributes(){
+            cout<<"Breed: "<<breed<<"\n"<<"Lifespan: "<<lifeSpan<<"\n"<<"name: "<<name<<"\n"<<"color: "<<color<<endl;
+        }
+};
+
+class Cat: public Animal{
+    public:
+        string name;
+        string color;
+        
+        void setAttributes(string b,int ls,string n,string c){
+            this->breed=b;
+            this->lifeSpan=ls;
+            this->name=n;
+            this->color=c;
+        }
+        void getAttributes(){
+            cout<<"Breed: "<<breed<<"\n"<<"Lifespan: "<<lifeSpan<<"\n"<<"name: "<<name<<"\n"<<"color: "<<color<<endl;
+        }
+};
+
+int main(){
+    Dog d1;
+    d1.setAttributes("Labrador Retriever",15,"tommy","light brown");
+    d1.getAttributes();
+    
+    Cat c1;
+    c1.setAttributes("Asian Horse",30,"Sheion","white");
+    c1.getAttributes();
+    
+    return 0;
+}

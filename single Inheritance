@@ -1,3 +1,5 @@
+1> Single Inheritance
+
 #include<iostream>
 using namespace std;
 
@@ -28,5 +30,32 @@ int main(){
     Dog d2;
     d2.setAttributes("Labrador Retriever",15,"tommy","light brown");
     d2.getAttributes();
+    return 0;
+}
+
+
+2> Single Inheritance
+
+#include<iostream>
+using namespace std;
+
+class Animal{
+    public:
+        void eat(){
+            cout<<"Eating...."<<endl;
+        }
+};
+
+class Dog: public Animal{
+    public:
+        void bark(){
+            cout<<"Barking...."<<endl;
+        }
+};
+
+int main(){
+    Dog d;
+    d.eat();    // Inherited from Animal.
+    d.bark();   // From Dog.
     return 0;
 }

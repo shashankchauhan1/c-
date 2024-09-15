@@ -1,3 +1,5 @@
+1> Multiple Inheritance
+
 #include<iostream>
 using namespace std;
 
@@ -30,5 +32,39 @@ int main(){
     obj.bark();
     obj.tell();
     
+    return 0;
+}
+
+
+2> Multiple Inheritance
+
+#include<iostream>
+using namespace std;
+
+class Father{
+    public:
+        void height(){
+            cout<<"Father Height"<<endl;
+        }
+};
+
+class Mother{
+    public:
+        void eyes(){
+            cout<<"Mother Eyes"<<endl;
+        }
+};
+
+class Child:public Father,public Mother{
+    public:
+        void show(){
+            cout<<"Child inherits"<<endl;
+        }
+};
+
+int main(){
+    Child c;
+    c.height();
+    c.eyes();
     return 0;
 }

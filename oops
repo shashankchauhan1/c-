@@ -11,3 +11,20 @@ class classname{
 	// properties,attributes.
 	// meathods.
 }
+
+
+// Inheritance access modifier table
+
+access modifier	mode of Inheritance		sub-class
+
+public		public			public
+public		private			private
+public		protected			protected
+
+protected		public			protected
+protected 		protected			protected
+protected		private			private
+
+private		private			not accessible
+private		public			N.A
+private		protected			N.A

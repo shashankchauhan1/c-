@@ -1,2 +1,41 @@
 // write a program to insert a element at a certain position using object.
 
+#include<iostream>
+using namespace std;
+
+class A{
+    public:
+        void changeArray(int arr[],int &n,int pos,int el){
+            for(int i=n; i>=pos; i--){
+                arr[i]=arr[i-1];
+            }
+            arr[pos-1]=el;
+            n++;
+        }
+        
+        void display(int arr[],int n){
+            for(int i=0; i<n; i++){
+                cout<<arr[i]<<" ";
+            }   
+        }
+        
+};
+
+int main(){
+    A obj;
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    int pos,el;
+    cout<<"Enter position: ";
+    cin>>pos;
+    cout<<"Enter element: ";
+    cin>>el;
+    obj.changeArray(arr,n,pos,el);
+    obj.display(arr,n);
+    
+    return 0;
+}
